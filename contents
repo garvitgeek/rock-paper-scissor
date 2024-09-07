@@ -1,4 +1,5 @@
 // Online C++ compiler to run C++ program online
+// Online C++ compiler to run C++ program online
 
 //rock,paper,scissor game
 
@@ -18,6 +19,9 @@ int main() {
     string user2_Choice;
     
    
+   string uname_1;
+   string uname_2;
+   
     
     cout<<"welcome to the game"<<endl;
     
@@ -28,6 +32,13 @@ int main() {
     cin>>user_Option;
     
     
+    cout<<"enter user 1 name"<<endl;
+    cin>>uname_1;
+    
+     cout<<"enter user 2 name"<<endl;
+    cin>>uname_2;
+    
+    
     //start of user mode
     
     int user1_Point=0;
@@ -35,7 +46,7 @@ int main() {
     if(user_Option == "user" || "u" ||"user vs user"){
         cout<<"lets begin the user vs user match"<<endl;
         
-         while(user1_Point  < 4 || user2_Point < 4){
+         while(user1_Point  < 4 && user2_Point < 4){
         
         //continue until some wins
         
@@ -122,11 +133,23 @@ int main() {
         }
         
          }
+         
+         
+         // conclusion
+         
+          if(user1_Point >= 3){
+        cout<<uname_1<<" wins : hip hip hurray"<<endl;
+    }else if(user2_Point >= 3){
+        cout<<uname_2<<" wins : hip hip hurray"<<endl;
+    }
+         
     }
     
     
     cout<<user1_Point<<endl;
     cout<<user2_Point<<endl;
+    
+   
 
     return 0;
 }
