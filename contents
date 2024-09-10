@@ -1,4 +1,5 @@
 #include <iostream>
+#include<string>
 using namespace std;
 
 int main() {
@@ -25,15 +26,22 @@ int main() {
 
     cout<<"enter user word for user  mode \n \n  "<<endl;
     cin>>user_Option;
+/*
+
+consuming the empty line in the cin buffer 
 
 
-    cout<<"enter user 1 name \n "<<endl;
-    cin>>uname_1;
+*/
+
+cin.ignore();
+
+    cout<<"enter user 1 name   \n "<<endl;
+    getline(cin, uname_1);
 
     cout<<endl;
 
      cout<<"enter user 2 name\n "<<endl;
-    cin>>uname_2;
+    getline(cin, uname_2);
 
     cout<<endl<<endl;
     
@@ -42,7 +50,7 @@ int main() {
 
     int user1_Point=0;
     int  user2_Point=0;
-    if(user_Option == "user" || "u" ||"user vs user"){
+    if(user_Option == "user" ||user_Option == "u" || user_Option == "user vs user"){
         cout<<"lets begin the user vs user match"<<endl;
 
          while(user1_Point  < 4 && user2_Point < 4){
@@ -62,13 +70,13 @@ cout<<endl<<endl;
 
 
 
-        cout<<"enter the your choice "<<uname_1<< " rock, paper,scissor any one of them"<<endl<<endl;
+        cout<<"enter  your choice "<<uname_1<< " rock, paper,scissor any one of them"<<endl<<endl;
              
         cin>>user1_Choice;
 
              cout<<endl<<endl;
 
-        cout<<"enter the your choice "<<uname_2<<" rock,paper,scissor any one of them"<<endl<<endl;
+        cout<<"enter  your choice "<<uname_2<<" rock,paper,scissor any one of them"<<endl<<endl;
         cin>>user2_Choice;
 
         // important logic work or code for comparison we can say
