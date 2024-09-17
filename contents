@@ -4,11 +4,9 @@ using namespace std;
 
 int main() {
 
-    // first try to create for the user vs user mode
-    // then try to create computer mode
-    //then try to create point mode
+   
 
-    //try to use nested if and then else if laadder
+//local variable declaration
 
     string user_Option;
     string user1_Choice;
@@ -19,6 +17,7 @@ int main() {
    string uname_2;
 
 
+// getting input
     cout<<"welcome to the game"<<endl;
 
     string array_Options[3] = {"rock","paper","scissor"};
@@ -26,12 +25,7 @@ int main() {
 
     cout<<"enter user word for user  mode \n \n  "<<endl;
     cin>>user_Option;
-/*
 
-consuming the empty line in the cin buffer 
-
-
-*/
 
 cin.ignore();
 
@@ -46,8 +40,10 @@ cin.ignore();
     cout<<endl<<endl;
     
 
-    //start of user mode
+    //entering in the user mode
 
+
+//conditional statements
     int user1_Point=0;
     int  user2_Point=0;
     if(user_Option == "user" ||user_Option == "u" || user_Option == "user vs user"){
@@ -79,7 +75,10 @@ cout<<endl<<endl;
         cout<<"enter  your choice "<<uname_2<<" rock,paper,scissor any one of them"<<endl<<endl;
         cin>>user2_Choice;
 
-        // important logic work or code for comparison we can say
+        
+
+
+// important logic work or code for comparison we can say
 
 
 cout<<endl<<endl;
@@ -147,7 +146,7 @@ cout<<endl<<endl;
          }
 
 
-         // conclusion
+         // concluding the winner
 
           if(user1_Point >= 3){
         cout<<uname_1<<" wins : hip hip hurray"<<endl;
