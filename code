@@ -1,0 +1,132 @@
+// Online C++ compiler to run C++ program online
+
+//rock,paper,scissor game
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    // first try to create for the user vs user mode
+    // then try to create computer mode
+    //then try to create point mode
+    
+    //try to use nested if and then else if laadder
+    
+    string user_Option;
+    string user1_Choice;
+    string user2_Choice;
+    
+   
+    
+    cout<<"welcome to the game"<<endl;
+    
+    string array_Options[3] = {"rock","paper","scissor"};
+    
+    
+    cout<<"enter user word for user  mode"<<endl;
+    cin>>user_Option;
+    
+    
+    //start of user mode
+    
+    int user1_Point=0;
+    int  user2_Point=0;
+    if(user_Option == "user" || "u" ||"user vs user"){
+        cout<<"lets begin the user vs user match"<<endl;
+        
+         while(user1_Point  < 4 || user2_Point < 4){
+        
+        //continue until some wins
+        
+        cout<<"points of user 1  : "<<user1_Point<<endl;
+        cout<<"points of user 2  : "<<user2_Point<<endl;
+        
+   
+        
+     
+        
+        
+        
+        
+        
+        cout<<"enter the your choice user 1 rock,paper,scissor any one of them"<<endl;
+        cin>>user1_Choice;
+        
+        cout<<"enter the your choice user 2 rock,paper,scissor any one of them"<<endl;
+        cin>>user2_Choice;
+        
+        // important logic work or code for comparison we can say
+        
+
+        
+        
+        if(user1_Choice == "rock" && user2_Choice == "scissor") {
+            cout<<" user 1 wins "<<endl;
+            user1_Point = user1_Point + 1;
+            
+        }
+        
+    else    if(user1_Choice == "rock" && user2_Choice == "paper") {
+            cout<<" user 2 wins "<<endl;
+            user2_Point = user2_Point + 1;
+        }
+        
+        else if(user1_Choice == "rock" && user2_Choice == "rock") {
+            cout<<" its a tie "<<endl;
+        }
+        
+        // second case
+        
+        else if(user1_Choice == "paper" && user2_Choice == "rock") {
+            cout<<" user 1 wins "<<endl;
+            user1_Point = user1_Point + 1;
+        }
+        
+        
+        
+        else if(user1_Choice == "paper" && user2_Choice == "paper") {
+            cout<<" its a tie "<<endl;
+        }
+           else if(user1_Choice == "paper" && user2_Choice == "scissor") {
+            cout<<" user 1 wins "<<endl;
+            user1_Point = user1_Point + 1;
+            
+           }
+            
+            
+            // third case
+            
+            
+        else    if(user1_Choice == "scissor" && user2_Choice == "rock") {
+            cout<<" user 2 wins"<<endl;
+            user2_Point = user2_Point + 1;
+        }
+            
+            else  if(user1_Choice == "scissor" && user2_Choice == "paper") {
+            cout<<" user 1 wins"<<endl;
+            user1_Point = user1_Point + 1;
+            }
+            
+            else  if(user1_Choice == "scissor" && user2_Choice == "scissor") {
+            cout<<" its a tie"<<endl;
+            
+        }
+        
+ 8       
+        
+        
+        
+        else{
+            cout<<"its same"<<endl;
+        }
+        
+         }
+    }
+    
+    
+    cout<<user1_Point<<endl;
+    cout<<user2_Point<<endl;
+
+    return 0;
+}
